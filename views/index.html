@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="my file server" />
 
     <title>Drive</title>
 
@@ -17,10 +18,19 @@
     <div id="items">
       {{#each files}}
       <div>
-        <a href="/view/{{this}}" loading="lazy">
+        <a href="{{this.url}}">
           <div class="item">
-            <img class="item-preview" src="/view/{{this}}" />
-            <div class="item-name">{{this}}</div>
+            {{#if this.isText}}
+            <p class="item-text">{{this.icon}}</p>
+            {{else}}
+            <img
+              class="item-preview"
+              src="/{{this.icon}}"
+              alt="{{this.name}}"
+              loading="lazy"
+            />
+            {{/if}}
+            <div class="item-name">{{this.name}}</div>
           </div>
         </a>
       </div>

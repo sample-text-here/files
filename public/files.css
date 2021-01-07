@@ -7,6 +7,10 @@
   min-width: 200px;
 }
 
+#items a {
+  text-decoration: none;
+}
+
 .item {
   margin: auto;
   border: solid var(--foreground) 2px;
@@ -38,4 +42,8 @@
 .item:hover .item-name {
   height: 2em;
   opacity: 1;
+}
+
+.item-text {
+  margin: 0.5em;
 }

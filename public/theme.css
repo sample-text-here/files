@@ -17,7 +17,7 @@ a {
 }
 
 :root {
-  --background: #eee;
+  --background: #ddd;
   --foreground: #222;
   --accent: #24e;
 }
@@ -25,7 +25,7 @@ a {
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #222;
-    --foreground: #eee;
+    --foreground: #ddd;
     --accent: #8ae;
   }
 }
