@@ -1,6 +1,8 @@
 dependencies:
   compression: 1.7.4
   express: 4.17.1
+  hbs: 4.1.1
+  ip: 1.1.5
   socket.io: 3.0.5
 lockfileVersion: 5.2
 packages:
@@ -261,6 +263,10 @@ packages:
       node: ">= 0.8"
     resolution:
       integrity: sha512-aAWcW57uxVNrQZqFXjITpW3sIUQmHGG3qSb9mUah9MgMC4NeWhNOlNjXEYq3HjRAvL6arUviZGGJsBg6z0zsWA==
+  /foreachasync/3.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-VQKYfchxS+M5IJfzLgBxyd7gfPY=
   /forwarded/0.1.2:
     dev: false
     engines:
@@ -273,6 +279,30 @@ packages:
       node: ">= 0.6"
     resolution:
       integrity: sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=
+  /handlebars/4.7.6:
+    dependencies:
+      minimist: 1.2.5
+      neo-async: 2.6.2
+      source-map: 0.6.1
+      wordwrap: 1.0.0
+    dev: false
+    engines:
+      node: ">=0.4.7"
+    hasBin: true
+    optionalDependencies:
+      uglify-js: 3.12.4
+    resolution:
+      integrity: sha512-1f2BACcBfiwAfStCKZNrUCgqNZkGsAT7UM3kkYtXuLo0KnaVfjKOyf7PRzB6++aK9STyT1Pd2ZCPe3EGOXleXA==
+  /hbs/4.1.1:
+    dependencies:
+      handlebars: 4.7.6
+      walk: 2.3.14
+    dev: false
+    engines:
+      node: ">= 0.8"
+      npm: 1.2.8000 || >= 1.4.16
+    resolution:
+      integrity: sha512-6QsbB4RwbpL4cb4DNyjEEPF+suwp+3yZqFVlhILEn92ScC0U4cDCR+FDX53jkfKJPhutcqhAvs+rOLZw5sQrDA==
   /http-errors/1.7.2:
     dependencies:
       depd: 1.1.2
@@ -313,6 +343,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
+  /ip/1.1.5:
+    dev: false
+    resolution:
+      integrity: sha1-vd7XARQpCCjAoDnnLvJfWq7ENUo=
   /ipaddr.js/1.9.1:
     dev: false
     engines:
@@ -356,6 +390,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
+  /minimist/1.2.5:
+    dev: false
+    resolution:
+      integrity: sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
   /ms/2.0.0:
     dev: false
     resolution:
@@ -374,6 +412,10 @@ packages:
       node: ">= 0.6"
     resolution:
       integrity: sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
+  /neo-async/2.6.2:
+    dev: false
+    resolution:
+      integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
   /object-assign/4.1.1:
     dev: false
     engines:
@@ -509,6 +551,12 @@ packages:
       node: ">=10.0.0"
     resolution:
       integrity: sha512-5yWQ43P/4IttmPCGKDQ3CVocBiJWGpibyhYJxgUhf69EHMzmK8XW0DkmHIoYdLmZaVZJyiEkUqpeC7rSCIqekw==
+  /source-map/0.6.1:
+    dev: false
+    engines:
+      node: ">=0.10.0"
+    resolution:
+      integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
   /statuses/1.5.0:
     dev: false
     engines:
@@ -530,6 +578,14 @@ packages:
       node: ">= 0.6"
     resolution:
       integrity: sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==
+  /uglify-js/3.12.4:
+    dev: false
+    engines:
+      node: ">=0.8.0"
+    hasBin: true
+    optional: true
+    resolution:
+      integrity: sha512-L5i5jg/SHkEqzN18gQMTWsZk3KelRsfD1wUVNqtq0kzqWQqcJjyL8yc1o8hJgRrWqrAl2mUFbhfznEIoi7zi2A==
   /unpipe/1.0.0:
     dev: false
     engines:
@@ -548,6 +604,16 @@ packages:
       node: ">= 0.8"
     resolution:
       integrity: sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
+  /walk/2.3.14:
+    dependencies:
+      foreachasync: 3.0.0
+    dev: false
+    resolution:
+      integrity: sha512-5skcWAUmySj6hkBdH6B6+3ddMjVQYH5Qy9QGbPmN8kVmLteXk+yVXg+yfk1nbX30EYakahLrr8iPcCxJQSCBeg==
+  /wordwrap/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-J1hIEIkUVqQXHI0CJkQa3pDLyus=
   /ws/7.4.2:
     dev: false
     engines:
@@ -565,4 +631,6 @@ packages:
 specifiers:
   compression: ^1.7.4
   express: ^4.17.1
+  hbs: ^4.1.1
+  ip: ^1.1.5
   socket.io: ^3.0.5

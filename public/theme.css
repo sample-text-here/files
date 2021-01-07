@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif;
+  font-size: 16px;
+  background: var(--background);
+  padding-top: 2em;
+}
+
+:root {
+  --background: #eee;
+  --foreground: #222;
+  --accent: #8ae;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #222;
+    --foreground: #eee;
+  }
+}
