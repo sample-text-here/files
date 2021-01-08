@@ -1,0 +1,18 @@
+.folder {
+  height: 2em;
+  padding: 4px 0.5em;
+  position: static;
+  overflow: hidden;
+  display: flex;
+}
+
+.folder-name {
+  text-overflow: ellipsis;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+.folder-icon {
+  height: 100%;
+  margin-right: 0.5em;
+}

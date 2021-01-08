@@ -1,0 +1,4 @@
+breadcrumbs
+better folders
+upload and download
+file stats

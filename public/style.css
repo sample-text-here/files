@@ -1,2 +1,37 @@
-@import "theme.css";
-@import "files.css";
+/* the main styling, in every file */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif;
+  font-size: 16px;
+  background: var(--background);
+  padding-top: 2em;
+}
+
+a {
+  color: var(--accent);
+}
+
+:root {
+  --background: #ddd;
+  --foreground: #222;
+  --accent: #24e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #222;
+    --foreground: #ddd;
+    --accent: #8ae;
+  }
+
+  .icon {
+    filter: invert(0.96);
+  }
+}

@@ -10,32 +10,59 @@
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/files.css" />
+    {{#if folders}}
+    <link rel="stylesheet" href="/folders.css" />
+    {{/if}}
 
     <!-- import the webpage's javascript file -->
     <script src="/main.js" type="module" defer></script>
   </head>
   <body>
-    <div id="items">
-      {{#each files}}
+    {{#if folders}}
+    <a class="skip" href="#folders">skip to folders</a>
+    {{/if}} {{#if files}}
+    <a class="skip" href="#files">skip to files</a>
+    {{/if}} {{#if folders}}
+    <div id="folders">
+      {{#each folders}}
       <div>
         <a href="{{this.url}}">
-          <div class="item">
-            {{#if this.isText}}
-            <p class="item-text">{{this.icon}}</p>
-            {{else}}
+          <div class="folder">
             <img
-              class="item-preview"
-              src="/{{this.icon}}"
-              alt="{{this.name}}"
-              loading="lazy"
+              src="{{#if this.toParent}}/icons/up.png{{else}}/icons/folder.png{{/if}}"
+              class="folder-icon icon"
+              alt="folder: {{this.name}}"
             />
-            {{/if}}
-            <div class="item-name">{{this.name}}</div>
+            <div class="folder-name">{{this.name}}</div>
           </div>
         </a>
       </div>
       {{/each}}
     </div>
-    <script src="/socket.io/socket.io.js"></script>
+    {{/if}} {{#if files}}
+    <div id="files">
+      {{#each files}}
+      <div>
+        <a href="{{this.url}}">
+          <div class="file">
+            {{#if this.isText}}
+            <p class="file-text">{{this.icon}}</p>
+            {{else}}
+            <img
+              class="file-preview {{#if this.isIcon}}icon{{/if}}"
+              src="/{{this.icon}}"
+              alt="file: {{this.name}}"
+              loading="lazy"
+            />
+            {{/if}}
+            <div class="file-name">{{this.name}}</div>
+          </div>
+        </a>
+      </div>
+      {{/each}}
+    </div>
+    {{/if}}
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
   </body>
 </html>
