@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="my file server" />
+
+    <title>Drive</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      body {
+        padding: 2em;
+        text-align: left;
+        color: var(--foreground);
+      }
+    </style>
+
+    <!-- import the webpage's javascript file -->
+    <script src="/main.js" type="module" defer></script>
+  </head>
+  <body>
+    <h2>prefrences</h2>
+    <a href="/">back</a>
+    <br />
+    <br />
+    display as: <a href="/set/display/{{display.name}}">{{display.name}}</a> {{display.info}}
+    <br />
+  </body>
+</html>

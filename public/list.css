@@ -1,0 +1,28 @@
+table {
+  width: 70%;
+  margin: auto;
+  border-collapse: collapse;
+  padding: 1em;
+  color: var(--foreground);
+  margin-bottom: 2em;
+}
+
+td,
+th {
+  padding: 0.5em;
+}
+
+td:first-child,
+th {
+  padding: 0.5em;
+}
+
+tr:nth-child(odd) {
+  background: #ccc;
+}
+
+@media (prefers-color-scheme: dark) { 
+  tr:nth-child(odd) { 
+    background: #333; 
+  } 
+} 

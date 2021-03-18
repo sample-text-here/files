@@ -24,14 +24,20 @@ a {
   --accent: #24e;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #222;
-    --foreground: #ddd;
-    --accent: #8ae;
-  }
-
-  .icon {
-    filter: invert(0.96);
-  }
+#menu {
+  position: absolute;
+  left: 2em;
+  top: 2em;
 }
+
+@media (prefers-color-scheme: dark) { 
+  :root { 
+    --background: #222; 
+    --foreground: #ddd; 
+    --accent: #8ae; 
+  } 
+
+  .icon { 
+    filter: invert(0.96); 
+  } 
+} 

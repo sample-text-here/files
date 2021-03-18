@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head}}
+
+    <title>Drive</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/list.css" />
+  </head>
+  <body>    
+    {{> menu}}
+    <table>
+      <colgroup>
+        <col />
+        <col style="width: 10em" />
+      </colgroup>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+      </tr>
+      {{#each items}}
+      <tr>
+        <td>
+          <a href="{{this.url}}">{{this.name}}</a>
+        </td>
+        <td>{{type}}</td>
+      </tr>
+      {{/each}}
+    </table>
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+  </body>
+</html>

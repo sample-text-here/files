@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="my file server" />
-
+    {{> head}}
+  
     <title>Drive</title>
 
     <!-- import the webpage's stylesheet -->
@@ -14,9 +11,6 @@
     {{#if folders}}
     <link rel="stylesheet" href="/folders.css" />
     {{/if}}
-
-    <!-- import the webpage's javascript file -->
-    <script src="/main.js" type="module" defer></script>
   </head>
   <body>
     {{#if folders}}
@@ -24,6 +18,7 @@
     {{/if}} {{#if files}}
     <a class="skip" href="#files">skip to files</a>
     {{/if}} {{#if folders}}
+    {{> menu}}
     <div id="folders">
       {{#each folders}}
       <div>
